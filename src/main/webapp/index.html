@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to CineMatch</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style>
+			body, html {
+			  height: 100%;
+			  margin: 0;
+			  font-family: Arial, Helvetica, sans-serif;
+			}
+
+			* {
+			  box-sizing: border-box;
+			}
+			.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+.flex-items {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+			.bg-image {
+			  /* The image used */
+			  
+			  
+			  /* Add the blur effect */
+			  filter: blur(8px);
+			  -webkit-filter: blur(8px);
+			  
+			  /* Full height */
+			  height: 100%; 
+			  width: 100%;
+			  /* Center and scale the image nicely */
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			}
+
+			/* Position text in the middle of the page/image */
+			.bg-text {
+			  background-color: rgb(0,0,0); /* Fallback color */
+			  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+			  color: white;
+			  font-weight: bold;
+			  border: 3px solid #f1f1f1;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  z-index: 2;
+			  width: 80%;
+			  padding: 20px;
+			  text-align: center;
+			}
+			.boxTwo {
+			  color: #000;
+			  position: relative;
+			  float: right;
+			  
+			  width: 80%;
+			  padding: 5rem;
+			  text-align: center;
+			}
+		</style>
+    </head>
+    <body>
+        <!-- Block 1 -->
+		<div>
+                    <div style="position: absolute; top: 3.5rem; right: 3.5rem; z-index: 20">
+                        <button style="margin-right: 0.5rem;" onclick="javascript: location.replace('SignIn.jsp'); ">SignIn</button>
+                        <button style="" onclick="javascript: location.replace('SignUp.html'); ">SignUp</button>
+                    </div>
+		<!--<div class="bg-image"></div>-->
+                <image src="image02.png" class="bg-image">
+
+		<div class="bg-text">
+		  <h2>Logo</h2>
+		  <h1 style="font-size:50px">CineMatch</h1>
+		  <p>Unlock the World of Entertainment!!!</p>
+		</div>
+		</div>
+		<!-- Block 2 -->
+		<div class="flex-container">
+			<div class="flex-items" style="padding: 1.5rem">
+				<div style="position: absolute; left: -10rem; z-index: 10;">
+					<image src="images/image01.jpg" style="max-width: 70%">
+				</div>
+				<div style="z-index: 20; float: right;">
+					<div class="boxTwo">
+					  <h1 style="font-size:50px">Watch Movies Anywhere Anytime</h1>
+					  <p>Watch shows on your phones, tablets, laptops anywhere at anytime</p>
+					</div>
+				</div>
+			</div>
+                    <!-- Block 3 -->
+                    <div class="flex-items" style="padding: 1.7rem">
+				<p>hello</p>
+                    </div>
+                </div>
+			<!-- Block 3 -->
+			<!--<div class="flex-items" style="padding: 1.7rem">
+				<p>hello</p>
+			</div>
+		</div>-->
+    </body>
+</html>

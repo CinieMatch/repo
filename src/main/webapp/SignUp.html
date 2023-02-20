@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Cinemax-SignUp</title>
+        <link rel="stylesheet" href="Styles/signIn.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="app">
+            <!--<div id="header">
+                    <img id="logo" src="images/logo.png">
+            </div>-->
+            <div id="container">
+                <form id="log-in-form" action="ws/SignUp.jsp" method="POST">
+                    <div class="label-container">
+                        <img id="logo" src="images/logo.png">
+                        <h2 id="sign-in-text">Sign Up</h1>
+                    </div>
+        
+                    <div class="box-container">
+                        <input class="field" id="user-field" name="userName" type="text" required>
+                        <label class="label" id="user-label" for="user-field">User Name</label>
+                    </div>
+                    
+                    <div class="box-container">
+                        <input class="field" id="fName-field" name="fName" type="text" required>
+                        <label class="label" id="fName-label" for="fName-field">First Name</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="lName-field" name="lName" type="text" required>
+                        <label class="label" id="lName-label" for="lName-field">Last Name</label>
+                    </div>
+                    
+                    <div class="box-container">
+                        <input class="field" id="mail-field" name="email" type="email" required>
+                        <label class="label" id="mail-label" for="mail-field">Email ID</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="pwd-field" name="password" type="password" required>
+                        <label class="label" id="pwd-label" for="pwd-field">Password</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="repwd-field" name="repassword" type="password" onkeyup="confirmPass(this)" required>
+                        <label class="label" id="repwd-label" for="repwd-field">Confirm Password</label>
+                    </div>
+                    <div class="inputError" id="repwd-inputError" style="display: none"></div>
+                    <div class="box-container">
+                        <input class="field" id="age-field" name="age" type="number" onchange="ageVerify(this)" required>
+                        <label class="label" id="age-label" for="age-field">Age</label>
+                    </div>
+                    <div class="inputError" id="age-inputError" style="display: none"></div>
+                    <div class="box-container">
+                        <input class="field" id="phone-field" name="phone" type="text" required>
+                        <label class="label" id="phone-label" for="phone-field">Phone Number</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="address-field" name="address" type="text" required>
+                        <label class="label" id="address-label" for="address-field">Address</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="city-field" name="city" type="text" required>
+                        <label class="label" id="city-label" for="city-field">City</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="state-field" name="state" type="text" required>
+                        <label class="label" id="state-label" for="state-field">State</label>
+                    </div>
+                    <div class="box-container">
+                        <input class="field" id="zip-field" name="zip" type="text" required>
+                        <label class="label" id="zip-label" for="zip-field">Zip</label>
+                    </div>
+                    
+                    
+                    <div class="box-container" id="login-button-container">
+                        <input id="login-button" type="submit" value="Sign Up">
+                    </div>
+                
+            </div>
+            
+        </div>
+        <footer>
+                <div class="footer" id="footer">
+                    <!--<p class="footer-header">
+                        <span id="footer-header"></span>
+                        <a class="footer-link">0800-761-4632</a>
+                    </p>-->
+                    <ul class="inline-footer-ul">
+                        <li class="inline-footer-li">
+                            <h3 class="footer-link">Email: cinematch@email.com</h3>
+                        <li class="inline-footer-li">
+                            <h3 class="footer-link">Customer Support: (820)-222-6312</h3>
+                        </li>
+                    </ul>
+                    <p style="float: right">Designed by Team CineMatch</p>
+                </div>
+            </footer>
+        <script>
+            function confirmPass(ths){
+                if(ths.value != document.getElementById("pwd-field").value){
+                    document.getElementById("repwd-inputError").style.display = "block";
+                    document.getElementById("repwd-inputError").style.color = "red";
+                    document.getElementById("repwd-inputError").innerHTML = "Passwords Does NOT Match";
+                }
+                else{
+                    document.getElementById("repwd-inputError").style.color = "green";
+                    document.getElementById("repwd-inputError").innerHTML = "Passwords Match";
+                }
+            }
+            function ageVerify(ths){
+                if(ths.value < 18){
+                    //console.log("less");
+                    document.getElementById("age-inputError").style.display = "block";
+                    document.getElementById("age-inputError").innerHTML = "Age should be 18+ to create an account."
+                }
+                else{
+                    document.getElementById("age-inputError").style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
